@@ -255,12 +255,17 @@ body {
     max-width: 800px;
     margin: 2rem auto;
 }
+/* FAQ Section */
+.accordion-toggle {
+    display: none;
+}
 
 .accordion-item {
     background: white;
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-header {
@@ -278,10 +283,23 @@ body {
 }
 
 .accordion-content {
-    padding: 0 1.5rem;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.accordion-toggle:checked+.accordion-header+.accordion-content {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.accordion-toggle:checked+.accordion-header i {
+    transform: rotate(45deg);
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
 }
 
 /* Testimonials Section */
