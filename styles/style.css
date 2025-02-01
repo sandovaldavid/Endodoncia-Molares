@@ -13,6 +13,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1.6;
     color: var(--text-color);
